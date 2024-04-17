@@ -26,10 +26,10 @@ const Dropdown = () => {
       {isOpen && (
         <div className="dropdown-options">
           {/* Use o Link para cada opção do dropdown */}
-          <Link to="/form_cadastro" className="dropdown-option" onClick={() => handleOptionClick('Imóvel')}>
+          <Link to="/cadastro_imovel" className="dropdown-option" onClick={() => handleOptionClick('Imóvel')}>
             Imóvel
           </Link>
-          <Link to="/form_cadastro" className="dropdown-option" onClick={() => handleOptionClick('Novo Corretor')}>
+          <Link to="/cadastro_corretor" className="dropdown-option" onClick={() => handleOptionClick('Novo Corretor')}>
             Novo Corretor
           </Link>
         </div>
