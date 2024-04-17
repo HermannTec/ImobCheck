@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/home.css'; // Importe o arquivo de estilo home.css
-import Header from './header';
 
 const Home = () => {
   return (
