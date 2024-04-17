@@ -1,0 +1,131 @@
+/* Adicione seus estilos CSS aqui */
+menu{
+  background-color: #333; /* Cor de fundo da faixa */
+  color: #fff; /* Cor do texto */
+  text-align: center; /* Alinhar o texto ao centro */
+  font-family: Bodoni, serif; /* Fonte de letra */
+  padding: 10px 0; /* Adicionar um espaçamento interno na faixa */
+
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os componentes quebrem para uma nova linha quando não houver espaço suficiente */
+
+}
+
+.container > div {
+  width: calc(20% - 20px); /* Define a largura dos componentes para 20% da largura total da tela com uma margem de 10px entre eles */
+  margin: 5ch;
+}
+
+.texto-descricao {
+  margin-bottom: 5px; /* Adiciona um espaço entre o texto e o campo de entrada */
+}
+
+textarea {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal img {
+  max-width: 90vw; /* Define a largura máxima da imagem como 90% da largura da viewport */
+  max-height: 90vh; /* Define a altura máxima da imagem como 90% da altura da viewport */
+}
+
+.fechar-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #FFFFFF;
+  border: none;
+  cursor: pointer;
+  z-index: 10000; /* Garante que o botão de fechar esteja acima da imagem */
+}
+
+.proxima-foto {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: #FFFFFF;
+  border: none;
+  cursor: pointer;
+  z-index: 10000; /* Garante que o botão de próxima foto esteja acima da imagem */
+}
+
+
+/* Media query para dispositivos móveis */
+@media screen and (max-width: 768px) {
+  .container > div {
+    width: calc(50% - 20px); /* Define a largura dos componentes para 50% da largura total da tela com uma margem de 10px entre eles */
+    height: calc(100% - 200000%);
+  }
+}
+
+.header {
+  background-color: #333; /* Cor de fundo da faixa */
+  color: #fff; /* Cor do texto */
+  text-align: center; /* Alinhar o texto ao centro */
+  font-family: Bodoni, serif; /* Fonte de letra */
+  padding: 10px 0; /* Adicionar um espaçamento interno na faixa */
+}
+
+.login-button {
+
+  font-size: 25px;
+  color: rgb(241, 237, 242);
+
+}
+.login-botao:hover{
+  background-color: rgb(7, 7, 7);
+  color: rgb(116, 97, 190);
+  transform: scale(80)
+}
+
+.home-button{
+font-size: 25px;
+color: #f1edf2;
+margin-bottom: 10000px;
+width: 300px;
+height:100px;
+
+}
+.home-botao:hover{
+background-color: rgb(7, 7, 7);
+color: rgb(116, 97, 190);
+transform: scale(80)
+
+}
+
+
+
+input[type="text"] {
+  width: calc(100% - 80px); /* Define a largura do campo de entrada para 100% da largura total da tela menos a margem */
+  margin-bottom: 10px;
+}
+
+button {
+  width: calc(100% - 20px); /* Define a largura do botão para 100% da largura total da tela menos a margem */
+  margin-bottom: 10px;
+}
+
+
+
+
