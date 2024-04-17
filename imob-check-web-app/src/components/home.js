@@ -10,7 +10,7 @@ const Home = () => {
       <Header />
       
     <div className="home-container">
-      {/* Inclua o componente Header aqui */}
+     
       <div className="content">
         <h1>Bem-vindo ao ImovCheck</h1>
         <p>
