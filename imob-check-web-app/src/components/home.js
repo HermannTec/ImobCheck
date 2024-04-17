@@ -1,12 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Header from './header'; // Importe o componente Header
 import '../styles/home.css'; // Importe o arquivo de estilo home.css
 
 const Home = () => {
   return (
-    <div className="home-container">
+    <div>
       
-
+      <Header />
+      
+    <div className="home-container">
+      {/* Inclua o componente Header aqui */}
       <div className="content">
         <h1>Bem-vindo ao ImovCheck</h1>
         <p>
@@ -15,7 +19,7 @@ const Home = () => {
         <Link to="/login" className="login-button">Clique aqui para o Login</Link>
       </div>
     </div>
+    </div>
   );
 };
-
 export default Home;
