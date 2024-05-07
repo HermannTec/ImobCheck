@@ -4,6 +4,7 @@ import '../styles/formulario.css'; // Importe o arquivo de estilo
 import Header from './header';
 
 const Formulario = () => {
+  const [idImovel, setIdImovel] = useState('');
   const [data, setData] = useState('');
   const [vistoriador, setVistoriador] = useState('');
   const [corretor, setCorretor] = useState('');
@@ -21,6 +22,7 @@ const Formulario = () => {
     try {
       // Fazer a requisição para a API Flask
       const response = await axios.post('URL_DA_API', {
+        idImovel,
         data,
         vistoriador,
         corretor,
@@ -41,12 +43,16 @@ const Formulario = () => {
       console.error('Erro ao enviar o formulário:', error);
     }
   };
+
   return (
     <>
-    <Header />
-    <div className="formulario-container">
-      <form onSubmit={handleSubmit} className="formulario-form">
-        <label htmlFor="data">Data:</label>
+      <Header />
+      <div className="formulario-container">
+        <form onSubmit={handleSubmit} className="formulario-form">
+          <label htmlFor="idImovel">ID-Imóvel:</label>
+          <input type="text" id="idImovel" value={idImovel} onChange={(e) => setIdImovel(e.target.value)} />
+
+          <label htmlFor="data">Data:</label>
         <input type="date" id="data" value={data} onChange={(e) => setData(e.target.value)} />
 
         <label htmlFor="vistoriador">Vistoriador:</label>
@@ -90,9 +96,8 @@ const Formulario = () => {
         <label htmlFor="administradora">Administradora:</label>
         <input type="text" id="administradora" value={administradora} onChange={(e) => setAdministradora(e.target.value)} />
 
-        <button type="submit" className="formulario-submit-button">Enviar</button>
-      </form>
-    </div>
+        <button type="submit" className="formulario-submit-button">Enviar</button>        </form>
+      </div>
     </>
   );
 };
